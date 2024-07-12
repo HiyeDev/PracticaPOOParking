@@ -46,7 +46,11 @@ public class Menu extends javax.swing.JFrame {
         jLabelStartMonth.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ResetParkTimeDAO.resetAllParkTimeToZero();
+                int confirm = JOptionPane.showConfirmDialog(Menu.this, "Are you sure you want to reset all park time values to 0?", "Confirm Reset", JOptionPane.YES_NO_OPTION);
+                if (confirm == JOptionPane.YES_OPTION) {
+                    ResetParkTimeDAO.resetAllParkTimeToZero();
+                    JOptionPane.showMessageDialog(Menu.this, "All park time values have been reset to 0.");
+        }
             }
         
         });
