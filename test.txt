@@ -1,0 +1,2 @@
+Matricula		Tiempo estacionado (min)		Cantidad a pagar
+8287DND		141				0,28
